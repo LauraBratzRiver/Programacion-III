@@ -10,7 +10,7 @@ class crud:
         print("Iniciando conexion con la base de datos...")
         self.db = mysql.connector.connect(
             host="localhost",
-            port=3306,
+            port=3308,
             user="root",
             passwd="",
             database="db_academica_a2"
@@ -85,5 +85,5 @@ class servidorBasico(SimpleHTTPRequestHandler):
         self.wfile.write(resp.encode("utf-8"))
 
 print("Servidor iniciado")
-server = HTTPServer(("localhost", 3000), servidorBasico)
+server = HTTPServer(("localhost", 3308), servidorBasico)
 server.serve_forever()
